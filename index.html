@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+	<head>
+		<title>MACBET Home</title>
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="logo">
+				<a href="home.html"><img src="images/logo2.pdf" alt="logo2" height="200" width="700" title="Click me to come back to home"></a>
+			</div>
+			<div class="nav">
+					<button class="button"><a href="home.html" class="w3-button w3-maroon">HOME</a></button>
+					<button class="button"><a href="About.html" class="w3-button w3-maroon">ABOUT</a></button>
+					<button class="button"><a href="Contact.html" class="w3-button w3-maroon">CONTACT</a></button>
+			</div>
+			<div class="slideshow">
+				<img name="slide" width="600" height="400" title="Merch!">
+			</div>
+			<div class="content">
+				<h1>Welcome,</h1>
+				<p class="content">To this year's production of Macbeth the Opera, and our supernatural take on the original production, titled "Macbet". Use the navigation bar above to explore our website and purchase tickets, enjoy!<br><br>The show stars on April 1st, 2020!</p>
+			</div>
+			<div class="bottom">
+				<p class="bottom">Add us on Instagram!<br>@macbet2020</p>
+				<p class="bottom">Friend us on Facebook!<br>Macbet2020</p>
+				<p class="bottom">Questions? Contact us<br>+353800860006<br>theatre@macbet.gmail.com</p>
+			</div>
+		</div>
+		<script>
+			var i = 0;
+			var images = [];
+			var time = 2000;
+
+			images[0] = 'images/image1.jpg';
+			images[1] = 'images/image2.jpg';
+			images[2] = 'images/image3.jpg';
+			images[3] = 'images/image4.jpg';
+
+			function changeImg(){
+				document.slide.src = images[i];
+
+				if(i < images.length - 1){
+					i++;
+				} else {
+					i = 0;
+				}
+
+
+				setTimeout("changeImg()", time);
+			}
+
+			window.onload = changeImg;
+
+		</script>
+	</body>
